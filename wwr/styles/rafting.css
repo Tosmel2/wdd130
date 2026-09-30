@@ -1,5 +1,6 @@
 :root {
     --primary-color: #055a05;
+    --secondary-color: #f4a261;
     --accent1-color: #264653;
     --heading-font: "Times New Roman", "Georgia", "serif";
     --body-font: Arial, Helvetica, sans-serif;
@@ -23,18 +24,42 @@ footer {
     margin: 0 auto;
 }
 
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 0 2rem;
+    border: 1px solid var(--primary-color);
+}
+
 header nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 20px;
     list-style: none;
 }
 
 header nav ul li {
-    margin: 5px 0;
+    background-color: var(--accent1-color);
+    opacity: 0.8;
+    padding: 10px;
+    cursor: pointer;
 }
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* header nav ul li {
+    margin: 5px 0;
+} */
 
 h1,
 h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 nav,
@@ -43,6 +68,19 @@ section,
 article {
     margin: 12px 0;
     padding: 8px 0;
+}
+
+.hero article {
+    padding: 20px;
+}
+
+article h2 {
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+section h2 {
+    text-align: center;
 }
 
 .socialmedia {
@@ -86,4 +124,46 @@ h1 {
     float: right;
     width: 125px;
     height: 80px;
+}
+
+.history {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--primary-color);
+}
+
+.history p {
+    padding: 1rem;
+}
+
+.adventure_gallery {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--primary-color);
+}
+
+.adventure_gallery figure img {
+    width: 200px;
+    height: auto;
+}
+
+.adventure_gallery figure figcaption {
+    font-size: 0.8rem;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+}
+
+footer nav {
+    position: absolute;
+    right: 0;
 }
