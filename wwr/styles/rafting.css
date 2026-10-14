@@ -506,7 +506,6 @@ button:hover {
     margin: 0 auto;
 }
 
-/* 3 columns on larger screens, similar to the mock-up image */
 @media (min-width: 768px) {
     .trips-grid {
         grid-template-columns: repeat(3, 1fr);
